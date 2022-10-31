@@ -31,11 +31,11 @@ askForLevels()
 
             const timeH = document.querySelector('.timer');
             let timeSecond;
-            if(level=='Easy'){
+            if(level=='Easy' || level=='easy'){
                 timeSecond = 90
-            }else if(level == 'Medium'){
+            }else if(level == 'Medium' || level == 'medium'){
                 timeSecond = 60
-            }else if(level=='Hard'){
+            }else if(level=='Hard' || level=='hard'){
                 timeSecond = 30
             }else{
                 askForLevels();
@@ -138,16 +138,9 @@ function checkMatchedBlocks(firstBlock, secondBlock){
             secondBlock.classList.remove('is-flipped');
         }, duration)
         document.getElementById('fail').play();
-
-
     }
 
 }
-
-
-
-
-
 //randem function
 function wordRangom(numbers){
     //setting
@@ -169,24 +162,5 @@ function wordRangom(numbers){
     return numbers;
 }
 
-// const timeH = document.querySelector('.timer');
-// let timeSecond = 120 ;
-
-// timeH.innerHTML = `00:${timeSecond}`;
-// const countDown = setInterval(() => {
-//     timeSecond--;
-//     displayTime(timeSecond);
-//     if(timeSecond <= 0 || timeSecond < 1){
-//         endTime();
-//         clearInterval(countDown);
-//     }
-// }, 1000);
-
-// function displayTime(second){
-//     const min = Math.floor(second / 60);
-//     const sec = Math.floor(second % 60);
-//     timeH.innerHTML = `${min<10 ? '0':''}${min}:${sec<10?'' : ''}${sec}`
-// }
-// function endTime(){
-//     timeH.innerHTML = 'Time Out '
-// }
+   let array =element.classList.contains('is-flipped');
+    console.log(array);
